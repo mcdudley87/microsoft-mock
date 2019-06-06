@@ -1,0 +1,136 @@
+
+header {
+	grid-area: header;
+	border: 1px solid black;
+	background-color: maroon;
+	min-width: 500px;
+	height: 50px;
+}
+
+footer { 
+	grid-area: footer;
+	border: 1px solid black;
+	background-color: maroon;
+	min-width: 500px;
+	min-height: 300px;
+}
+
+body {
+	background-color: lightblue;
+	min-height: 100vh;
+	margin: 0;
+	display: inline-block;
+	grid-template-rows: 50px 590px 580px 590px 580px 590X 300px;
+	grid-template-columns: 1fr;
+	grid-template-areas: "header" 
+						 "jumbo1"
+						 "smallTop"
+						 "jumbo2"
+						 "smallBtm"
+						 "jumbo3"
+						 "footer";
+}
+
+/* main {
+	grid-area: main;
+	min-width: 500px;
+	min-height: 1000px;
+	background-color: blue;
+	margin: 0 auto;
+} */
+
+#jumbo1 {
+	grid-area: jumbo1; 
+	height: 590px;
+	min-width: 500px;
+	border: 1px solid black;
+	padding: 5px;
+
+}
+
+#jumbo2 {
+	grid-area: jumbo2;
+	height: 590px;
+	min-width: 500px;
+	border: 1px solid black;
+
+}
+
+#jumbo3 {
+	grid-area: jumbo3; 
+	height: 590px;
+	min-width: 500px;
+	border: 1px solid black;
+	padding: 5px;
+
+}
+
+#smallTop {
+	display: block;
+	grid-area: smallTop;
+	height: 357px;
+	min-width: 500px;
+	border: 1px solid black;
+	padding: 5px;
+
+}
+
+#smallBtm{
+	display: block;
+	grid-area: smallBtm;
+	height: 357px;
+	min-width: 500px;
+	border: 1px solid black;
+	padding: 5px;
+
+}
+
+
+/*   These do not need grid-areas   */
+
+.smallBox {
+	display: block;
+	height: 357px;
+	min-width: 450px;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.jumboProd{
+	display: block;
+	height: 357px;
+	min-width: 450px;
+	border: 1px solid black;
+	padding: 5px;
+
+}
+
+.jumboText{
+	display: block;
+	height: 357px;
+	min-width: 450px;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+
+
+@media screen and (min-width: 500px) {
+  .smallBox {
+	display: inline-block;
+    grid-template-rows: 281px;
+    grid-template-columns: ;
+	grid-template-areas: "smallBox smallBox"
+						  "smallBox smallBox"	
+	;
+  }
+
+  @media screen and (min-width: 500px) {
+  .jumboText {
+	display: inline-block;
+    grid-template-rows: 308px;
+    grid-template-columns: 1fr;
+	grid-template-areas: "jumboText "	
+						 "jumboProd"					  
+	;
+  }
